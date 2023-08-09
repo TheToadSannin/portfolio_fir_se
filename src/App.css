@@ -151,6 +151,8 @@ nav div i:hover {
 .cards {
   display: flex;
   justify-content: space-between;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .card {
   margin: 2em 0;
@@ -159,14 +161,16 @@ nav div i:hover {
   justify-content: center;
   align-items: center;
   background-color: rgb(69, 51, 173);
-  /* border: 1px solid white; */
-  width: 200px;
+  width: 300px;
   border-radius: 10px;
+  padding: 1em 0;
+  transition: all ease-in-out 0.5s;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 }
 .card p {
-  padding: 1em;
+  padding: 1em 0;
 }
 .card img {
-  padding: 1em;
-  width: 150px;
+  padding: 1em 0;
+  width: 200px;
 }

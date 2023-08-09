@@ -2,6 +2,7 @@ import React from "react";
 import my_avatar from "../assets/gaurav_avatar.png";
 import wdimg from "../assets/web_developer.png";
 import prgimg from "../assets/programmer.png";
+import { useEffect } from "react";
 
 const Home = () => {
   return (
@@ -37,6 +38,26 @@ const Home = () => {
 };
 
 const Card = (props) => {
+
+  useEffect(()=>{
+    let card = document.getElementsByClassName("card");
+    card = Array.from(card);
+    card.forEach((element)=> {
+      element.addEventListener("mousemove", (e)=>{
+        const x = -1*(((element.offsetWidth/2)-e.offsetX)/element.offsetWidth)*90;
+        const y = (((element.offsetHeight/2)-e.offsetY)/element.offsetHeight)*90;
+        console.log(x);
+
+        element.style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
+      });
+
+      element.addEventListener("mouseleave", (e)=>{
+        element.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+      })
+    });
+  }, []);
+
+
   return (
     <div className="card">
       <img src={props.src} alt="" />
