@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Preahvihear&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  background-color: #0c0c1d;
+  position: relative;
+  font-family: "Preahvihear", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1em;
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  background-color: #11122c;
+  border-radius: 40px;
+  width: 70px;
+  height: 300px;
+  padding: 1em;
+  font-size: 24px;
+}
+nav div a {
+  text-decoration: none;
+  color: white;
+}
+nav div i {
+  transition: all ease-in-out 0.15s;
+}
+
+nav div i:hover {
+  text-shadow: 0 0 5px currentColor;
+  scale: 1.15;
+}
+
+/* HOME PAGE  */
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home .intro {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 80%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 600px) {
+  .home .intro {
+    flex-direction: column-reverse;
+  }
+  .home div div h1 {
+    font-size: 24px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home .intro div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home div div h1 {
+  font-size: 60px;
+  color: white;
+}
+.home .intro div h1 span {
+  text-shadow: 0 0 5px currentColor;
+  color: rgb(95, 67, 255);
+}
+.home .intro div p {
+  font-size: 28px;
+  /* padding: 1rem 2rem 2rem 2rem; */
+}
+
+.home .intro img {
+  width: 500px;
+  filter: drop-shadow(3px -5px 10px rgb(95, 67, 255));
+}
+@media (max-width: 600px) {
+  nav {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  to {
-    transform: rotate(360deg);
+  nav div {
+    flex-direction: row;
+    width: 300px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
   }
+  nav div a {
+    padding: 0;
+  }
+
+  .home .intro {
+    flex-direction: column-reverse;
+  }
+  .home .intro div {
+    height: auto;
+  }
+  .home .intro div h1 {
+    padding-top: 1em;
+    font-size: 36px;
+  }
+  .home .intro div p {
+    font-size: 24px;
+  }
+  .home .intro img {
+    width: 300px;
+  }
+}
+
+.home .overview {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.home .overview h1 {
+  font-size: 60px;
+  text-shadow: 0 0 5px currentColor;
+  color: rgb(95, 67, 255);
+}
+.home .overview h3 {
+  font-size: 26px;
+}
+.home .overview > p {
+  font-size: 16px;
+  width: 50ch;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(69, 51, 173);
+  /* border: 1px solid white; */
+  width: 200px;
+  border-radius: 10px;
+}
+.card p {
+  padding: 1em;
+}
+.card img {
+  padding: 1em;
+  width: 150px;
 }
