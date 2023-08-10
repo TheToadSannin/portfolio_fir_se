@@ -50,11 +50,12 @@ const Card = (props) => {
         const x = -1*(((element.offsetWidth/2)-e.offsetX)/element.offsetWidth)*90;
         const y = (((element.offsetHeight/2)-e.offsetY)/element.offsetHeight)*90;
         
-
+        element.children[0].style.transition = "";
         element.children[0].style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
       })
 
       element.addEventListener("mouseleave", (e)=>{
+        element.children[0].style.transition = "all ease 0.5s";
         element.children[0].style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
       })
     });
