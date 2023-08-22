@@ -10,6 +10,22 @@
   box-sizing: border-box;
   padding: 0;
 }
+body{
+  background-image: url("/src/assets/stars_background.jpg");
+  animation: starsrotate 70s infinite;
+  /* background-position: 380px; */
+  animation-timing-function: linear;
+  /* background-size: 380px; */
+}
+@keyframes starsrotate {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 2560px;
+  }
+  
+}
 .blue {
   color: rgb(95, 67, 255);
 }
