@@ -5,16 +5,16 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <div>
-        <Link to={"/"}>
+        <a href={"/#home"}>
           <i class="fa-solid fa-house"></i>
-        </Link>
+        </a>
 
-        <Link to={"/"}>
+        <a href={"/#projects"}>
           <i class="fa-solid fa-diagram-project"></i>
-        </Link>
-        <Link to={"/"}>
+        </a>
+        <a href={"/#contactus"}>
           <i class="fa-solid fa-phone"></i>
-        </Link>
+        </a>
       </div>
     </nav>
   );

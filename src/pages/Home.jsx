@@ -8,6 +8,7 @@ import astrovista from "../assets/astrovista.png";
 import collegeLogo from "../assets/college_logo.png"
 import lotusLogo from "../assets/lotus_valley_logo.png"
 import springdalesLogo from "../assets/springdales_school.png"
+import rocketsend from "../assets/rocket.png"
 import { useEffect } from "react";
 
 const Home = () => {
@@ -38,7 +39,7 @@ const Home = () => {
 
   return (
     <main className="home">
-      <div className="intro">
+      <div className="intro" id="home">
         <div>
           <h1>
             Hi, I'am <span className="blue">Gaurav</span>
@@ -64,7 +65,7 @@ const Home = () => {
           <SkillCard src={prgimg} title="Programmer" />
         </div>
       </div>
-      <div className="projects">
+      <div className="projects" id="projects">
         <div>
           <p>MY WORK</p>
           <h1>
@@ -110,6 +111,17 @@ const Home = () => {
           <QualiCard type="College/Unviersity" image = {collegeLogo} detail="Pursuing Bachelor Of Technology in Computer Science and Engineering(2020 - 2024) from Amity University Madhya Pradesh Gwalior . With a major in Artificial Intelligence and Machine Learning. Holding the aggregate CGPA of 7.55."/>
           <QualiCard type="Higher secondary" image = {springdalesLogo} detail="Completed Higher Secondary schooling from Springdales School from Kota Rajasthan with a major in Science and Mathematics with the aggregate percentage of 67%."/>
           <QualiCard type="High School" image = {lotusLogo} detail="Completed High Schooling from Lotus Valley School in Mandsaur Mahdya Pradesh. with the Aggregate of 72%. "/>
+        </div>
+      </div>
+      <div className="contactus" id="contactus">
+        <div className="planets">
+          <div id="earth"></div>
+        </div>
+        <div className="inputs">
+          <h1><span className="blue">CONTACT US HERE</span></h1>
+          <input type="text" placeholder="Your Email" />
+          <input type="text" placeholder="Message for us..." />
+          <button><img src={rocketsend} alt="" /></button>
         </div>
       </div>
     </main>
