@@ -23,6 +23,7 @@ body {
   background-color: #0c0c1d;
   position: relative;
   font-family: "Preahvihear", sans-serif;
+  text-shadow: 0 0 5px rgb(47, 0, 255);
 }
 
 nav {
@@ -141,6 +142,11 @@ nav div i:hover {
   width: 300px;
   position: relative;
 }
+.card:hover div {
+  box-shadow: 0 0 20px rgb(95, 67, 255);
+  border: 2px solid white;
+}
+
 .card::after {
   content: "";
   position: absolute;
@@ -164,6 +170,11 @@ nav div i:hover {
   color: white;
   width: 70%;
 }
+
+.projects > div > h1 > span {
+  font-size: 60px;
+}
+
 .projects p {
   letter-spacing: 2px;
   line-height: 2;
@@ -186,8 +197,14 @@ nav div i:hover {
   padding: 1em;
   border-radius: 20px;
   width: 400px;
+  height: 500px;
   margin-bottom: 2em;
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+.project-card:hover div {
+  box-shadow: 0 0 20px rgb(95, 67, 255);
+  border: 2px solid white;
 }
 
 .project-card::after {
@@ -209,6 +226,74 @@ nav div i:hover {
   font-size: 14px;
   width: 40ch;
 }
+
+.projects > div:last-child {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+.projects > div:last-child h1 {
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+.qualifications {
+  width: 70%;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.qualifications>h1 {
+  font-size: 60px;
+  width: 100%;
+  letter-spacing: 2px;
+}
+.qualifications>p{
+  color: white;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2em;
+  letter-spacing: 2px;
+}
+.quali-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.qualicard{
+  border-radius: 20px;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 1.5em;
+  background-color: var(--card-color);
+  margin: 1em;
+  transition: ease-in-out .25s;
+}
+.qualicard h1{
+  letter-spacing: 1px;
+  padding: 0.5em;
+}
+.qualicard p{
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.qualicard:hover{
+  transform: scale(1.05);
+  border: 2px solid white;
+  box-shadow: 0 0 20px rgb(95, 67, 255);
+}
+
+
 
 @media (max-width: 600px) {
   nav {
@@ -265,9 +350,25 @@ nav div i:hover {
     font-size: 12px;
     width: 30ch;
   }
-
-  .project-card {
+  .qualifications{
+    width: 100%;
+    word-wrap: break-word;
+    margin: 0;
   }
+  .qualicard{
+    margin: 20px;
+    justify-items: center;
+  }
+  .qualicard >h1 {
+    font-size: 38px;
+  }
+  .qualicard > p {
+    font-size: 12px;
+    
+  }
+  
+
+
 }
 
 @media (max-width: 400px) {
@@ -275,6 +376,6 @@ nav div i:hover {
     width: 90vw;
   }
   .project-card p {
-    width: 25ch;
+    /* width: 30ch; */
   }
 }

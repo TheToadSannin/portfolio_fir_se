@@ -3,6 +3,11 @@ import my_avatar from "../assets/gaurav_avatar.png";
 import wdimg from "../assets/web_developer.png";
 import prgimg from "../assets/programmer.png";
 import auto_app from "../assets/auto_applica.png";
+import videotronics from "../assets/videotronics.png";
+import astrovista from "../assets/astrovista.png";
+import collegeLogo from "../assets/college_logo.png"
+import lotusLogo from "../assets/lotus_valley_logo.png"
+import springdalesLogo from "../assets/springdales_school.png"
 import { useEffect } from "react";
 
 const Home = () => {
@@ -74,9 +79,37 @@ const Home = () => {
           </p>
         </div>
         <div className="project-cards">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard
+            link={"https://good-teal-woodpecker-tam.cyclic.app"}
+            img={auto_app}
+            name={"Auto Applica"}
+          />
+          <ProjectCard
+            link={"https://www.livevideotronics.com/"}
+            img={videotronics}
+            name={"VideoTronics"}
+          />
+          <ProjectCard
+            link={"https://github.com/TheToadSannin/astro_vista"}
+            img={astrovista}
+            name={"Astro Vista"}
+          />
+        </div>
+        <div>
+          <h1>
+            More At My <a href="https://github.com/TheToadSannin/">Github </a>
+          </h1>
+        </div>
+      </div>
+      <div className="qualifications">
+        <h1>
+          <span className="blue">Qualifications</span>
+        </h1>
+      <p>All of my Qualification till now</p>
+        <div className="quali-cards">
+          <QualiCard type="College/Unviersity" image = {collegeLogo} detail="Pursuing Bachelor Of Technology in Computer Science and Engineering(2020 - 2024) from Amity University Madhya Pradesh Gwalior . With a major in Artificial Intelligence and Machine Learning. Holding the aggregate CGPA of 7.55."/>
+          <QualiCard type="Higher secondary" image = {springdalesLogo} detail="Completed Higher Secondary schooling from Springdales School from Kota Rajasthan with a major in Science and Mathematics with the aggregate percentage of 67%."/>
+          <QualiCard type="High School" image = {lotusLogo} detail="Completed High Schooling from Lotus Valley School in Mandsaur Mahdya Pradesh. with the Aggregate of 72%. "/>
         </div>
       </div>
     </main>
@@ -95,23 +128,39 @@ const SkillCard = (props) => {
 };
 
 const ProjectCard = (props) => {
+  const handleProjectClick = () =>{
+    window.open(props.link);
+  }
   return (
-    <div className="project-card cardhover">
+    <div className="project-card cardhover" onClick={handleProjectClick}>
       <div>
-        <img src={auto_app} alt="" />
-        <h2>Auto Applica</h2>
+        <img src={props.img} alt="" />
+        <h2>{props.name}</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
           molestiae consectetur ipsa autem, sint ipsum porro tempora, voluptate
           provident placeat accusamus
         </p>
         <p>
-          <span className="green">#reactjs</span>{" "}
-          <span className="blue">#mongodb</span>{" "}
-          <span className="pink">#nodejs</span>
+          <span className="green">#reactjs </span>
+          <span className="blue">#mongodb </span>
+          <span className="pink">#nodejs </span>
         </p>
       </div>
     </div>
   );
 };
+
+
+const QualiCard = (props) => {
+  return (
+    <div className="qualicard">
+      <h1>{props.type}</h1>
+      <div style={{height:"150px"}}>
+      <img src={props.image} width={100 + "px"} alt={props.type} />
+      </div>
+      <p>{props.detail}</p>
+    </div>
+  )
+}
 export default Home;
