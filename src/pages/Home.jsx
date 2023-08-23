@@ -108,7 +108,7 @@ const Home = () => {
         </h1>
       <p>All of my Qualification till now</p>
         <div className="quali-cards">
-          <QualiCard type="College/Unviersity" image = {collegeLogo} detail="Pursuing Bachelor Of Technology in Computer Science and Engineering(2020 - 2024) from Amity University Madhya Pradesh Gwalior . With a major in Artificial Intelligence and Machine Learning. Holding the aggregate CGPA of 7.55."/>
+          <QualiCard type="College / Unviersity" image = {collegeLogo} detail="Pursuing Bachelor Of Technology in Computer Science and Engineering(2020 - 2024) from Amity University Madhya Pradesh Gwalior . With a major in Artificial Intelligence and Machine Learning. Holding the aggregate CGPA of 7.55."/>
           <QualiCard type="Higher secondary" image = {springdalesLogo} detail="Completed Higher Secondary schooling from Springdales School from Kota Rajasthan with a major in Science and Mathematics with the aggregate percentage of 67%."/>
           <QualiCard type="High School" image = {lotusLogo} detail="Completed High Schooling from Lotus Valley School in Mandsaur Mahdya Pradesh. with the Aggregate of 72%. "/>
         </div>
