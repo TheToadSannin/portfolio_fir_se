@@ -79,16 +79,16 @@ const Home = () => {
         <div className="cards">
           <SkillCard src={wdimg} title="Web Developer" />
           <SkillCard src={prgimg} title="Programmer" />
-          <SkillCard src={gamer} title="Gamer" />
           <SkillCard src={chess} title="Chess player" />
+          <SkillCard src={gamer} title="Gamer" />
         </div>
       </div>
       <div className="findMe">
         <h1><span className="blue">Find Me Online</span></h1>
         <div className="links">
-          <a href="https://github.com/TheToadSannin"><i class="fa-brands fa-github" style={{"color": "#8c00ff"}}></i></a>
-          <a href="https://twitter.com/TheToadSannin"><i class="fa-brands fa-square-twitter" style={{"color": "#005eff"}}></i></a>
-          <a href="www.linkedin.com/in/gaurav-panwar-85822a22b"></a>
+          <a href="https://github.com/TheToadSannin" target="_blank"><i class="fa-brands fa-github" style={{"color": "#FFFFFF"}}></i></a>
+          <a href="https://twitter.com/TheToadSannin" target="_blank"><i class="fa-brands fa-square-twitter" style={{"color": "#FFFFFF"}}></i></a>
+          <a href="www.linkedin.com/in/gaurav-panwar-85822a22b" target="_blank"><i class="fa-brands fa-linkedin" style={{"color": "#FFFFFF"}}></i></a>
         </div>
       </div>
       <div className="projects" id="projects">
@@ -135,7 +135,7 @@ const Home = () => {
         <h1>
           <span className="blue">Qualifications</span>
         </h1>
-      <p>All of my Qualification till now</p>
+      <p>All of my Qualifications till now</p>
         <div className="quali-cards">
           <QualiCard type="College / Unviersity" image = {collegeLogo} detail="Pursuing Bachelor Of Technology in Computer Science and Engineering(2020 - 2024) from Amity University Madhya Pradesh Gwalior . With a major in Artificial Intelligence and Machine Learning. Holding the aggregate CGPA of 7.55."/>
           <QualiCard type="Higher secondary" image = {springdalesLogo} detail="Completed Higher Secondary schooling from Springdales School from Kota Rajasthan with a major in Science and Mathematics with the aggregate percentage of 67%."/>
@@ -147,11 +147,11 @@ const Home = () => {
           <div id="earth"></div>
         </div>
         <div className="inputs">
-          <h1><span className="blue">CONTACT US HERE</span></h1>
+          <h1><span className="blue">CONTACT ME HERE</span></h1>
           <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name = "user_email" placeholder="Your Email" />
-          <input type="text" name = "user_name" placeholder="Your Name" />
-          <textarea type="text" name="message" placeholder="Message for us..." />
+          <input type="text" name = "user_email" placeholder="Your Email" required />
+          <input type="text" name = "user_name" placeholder="Your Name" required />
+          <textarea type="text" name="message" placeholder="Message for me..." required/>
           <button type="submit"><img src={rocketsend} alt="" /></button>
           </form>
         </div>
