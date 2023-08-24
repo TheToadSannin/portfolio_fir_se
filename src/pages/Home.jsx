@@ -9,7 +9,13 @@ import collegeLogo from "../assets/college_logo.png"
 import lotusLogo from "../assets/lotus_valley_logo.png"
 import springdalesLogo from "../assets/springdales_school.png"
 import rocketsend from "../assets/rocket.png"
-import { useEffect } from "react";
+import chess from "../assets/chess.png"
+import gamer from "../assets/gamer.png"
+import github from "../assets/github.png"
+import twitter from "../assets/twitter.png"
+import linkedin from "../assets/linkedin.png"
+import { useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser"
 
 const Home = () => {
   useEffect(() => {
@@ -37,6 +43,20 @@ const Home = () => {
     });
   }, []);
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_2sv22fi', 'template_847g5y5', form.current, 'CevKviUGJtabB68KT')
+      .then((result) => {
+          console.log(result.text);
+          alert('Message Sent!')
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <main className="home">
       <div className="intro" id="home">
@@ -54,15 +74,21 @@ const Home = () => {
         <h3>INTRODUCTION</h3>
         <h1>OVERVIEW</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius nulla a
-          ullam esse magnam, magni odio consequatur maxime asperiores quaerat
-          cupiditate, doloribus voluptate laboriosam omnis inventore
+        Tech enthusiast at 21, specializing in web development. Proficient in HTML, CSS, and JavaScript, I create user-friendly and visually appealing websites. A meticulous and creative problem solver, I thrive in collaborative settings. Committed to staying current with technology trends, my portfolio reflects my dedication to impactful web solutions.
         </p>
         <div className="cards">
           <SkillCard src={wdimg} title="Web Developer" />
           <SkillCard src={prgimg} title="Programmer" />
-          <SkillCard src={prgimg} title="Programmer" />
-          <SkillCard src={prgimg} title="Programmer" />
+          <SkillCard src={gamer} title="Gamer" />
+          <SkillCard src={chess} title="Chess player" />
+        </div>
+      </div>
+      <div className="findMe">
+        <h1><span className="blue">Find Me Online</span></h1>
+        <div className="links">
+          <a href="https://github.com/TheToadSannin"><i class="fa-brands fa-github" style={{"color": "#8c00ff"}}></i></a>
+          <a href="https://twitter.com/TheToadSannin"><i class="fa-brands fa-square-twitter" style={{"color": "#005eff"}}></i></a>
+          <a href="www.linkedin.com/in/gaurav-panwar-85822a22b"></a>
         </div>
       </div>
       <div className="projects" id="projects">
@@ -84,16 +110,19 @@ const Home = () => {
             link={"https://good-teal-woodpecker-tam.cyclic.app"}
             img={auto_app}
             name={"Auto Applica"}
+            detail = {"Generates applications and allows to write applications and send to the respective respeint using Auto Applica only. Auto applica simplies the way of not only writing applications but also submitting applications saving a lot of efforts"}
           />
           <ProjectCard
             link={"https://www.livevideotronics.com/"}
             img={videotronics}
             name={"VideoTronics"}
+            detail = {"A Camera and drones repairing client helps you repair your drone. Bring us your drone or Camera we'll get you fix it. VideoTronics is a web app which'll guide you to us which will ehlp you solving your problems."}
           />
           <ProjectCard
             link={"https://github.com/TheToadSannin/astro_vista"}
             img={astrovista}
             name={"Astro Vista"}
+            detail={"A model of our Solar System, shows the sequence of planets, Shows the rotation speed and the direction of rotation, and also tells about the accurate Axial tilt of all planets. "}
           />
         </div>
         <div>
@@ -119,9 +148,12 @@ const Home = () => {
         </div>
         <div className="inputs">
           <h1><span className="blue">CONTACT US HERE</span></h1>
-          <input type="text" placeholder="Your Email" />
-          <input type="text" placeholder="Message for us..." />
-          <button><img src={rocketsend} alt="" /></button>
+          <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name = "user_email" placeholder="Your Email" />
+          <input type="text" name = "user_name" placeholder="Your Name" />
+          <textarea type="text" name="message" placeholder="Message for us..." />
+          <button type="submit"><img src={rocketsend} alt="" /></button>
+          </form>
         </div>
       </div>
     </main>
@@ -149,9 +181,7 @@ const ProjectCard = (props) => {
         <img src={props.img} alt="" />
         <h2>{props.name}</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-          molestiae consectetur ipsa autem, sint ipsum porro tempora, voluptate
-          provident placeat accusamus
+          {props.detail}
         </p>
         <p>
           <span className="green">#reactjs </span>

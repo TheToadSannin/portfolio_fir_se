@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Preahvihear&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(15, 15, 15);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: url('/src/assets/rocketScroll.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  -webkit-transform: rotate(180);
+}
+
+
+
 :root {
   --card-color: rgb(31, 23, 75);
 }
@@ -146,7 +166,8 @@ nav div i:hover {
 }
 
 .card div {
-  margin: 2em 0;
+  min-height: 270px;
+  margin: 2em 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,7 +237,7 @@ nav div i:hover {
   padding: 1em;
   border-radius: 20px;
   width: 400px;
-  height: 500px;
+  min-height: 500px;
   margin-bottom: 2em;
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 }
@@ -298,6 +319,7 @@ nav div i:hover {
 .qualicard h1{
   letter-spacing: 1px;
   padding: 0.5em;
+  text-align: center;
 }
 .qualicard p{
   font-family: "Quicksand", sans-serif;
@@ -312,6 +334,20 @@ nav div i:hover {
   box-shadow: 0 0 20px rgb(95, 67, 255);
 }
 
+.findMe{
+  border: 1px solid white;
+  width: 70%;
+  margin-top: 150px;
+}
+.findMe img{
+  width: 100px;
+}
+.findMe > h1 > span{
+  font-size: 60px;
+}
+
+
+
 .contactus{
   display: flex;
   flex-wrap: wrap;
@@ -324,10 +360,10 @@ nav div i:hover {
 .planets{
   padding: 1em;
 }
-.inputs{
+.inputs form{
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  /* padding: 1em; */
   /* border: 1px solid white; */
 }
 ::placeholder{
@@ -342,6 +378,16 @@ nav div i:hover {
   padding: 1em;
   border-radius: 50px;
   margin: 2em 0;
+}
+.inputs textarea{
+  background-color: var(--card-color);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 2em 0;
+  resize: none;
 }
 .inputs button img{
   width: 100px;
@@ -359,6 +405,7 @@ nav div i:hover {
 
 .inputs h1{
   font-size: 60px;
+  text-align: center;
 }
 
 #earth {
