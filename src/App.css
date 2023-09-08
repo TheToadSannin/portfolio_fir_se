@@ -362,7 +362,7 @@ nav div i:hover {
 .contactus{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2em;
   margin-top: 150px;
   width: 70%;
@@ -571,6 +571,9 @@ nav div i:hover {
   .findMe .links{
     flex-direction: column;
     align-items: center;
+  }
+  .findMe .links a{
+    margin-bottom: 1em;
   }
 
 }
