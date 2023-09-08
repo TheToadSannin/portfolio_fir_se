@@ -18,6 +18,9 @@ import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser"
 
 const Home = () => {
+
+  document.title = 'Gaurav Panwar';
+
   useEffect(() => {
     let card = document.getElementsByClassName("cardhover");
 
@@ -116,7 +119,7 @@ const Home = () => {
             link={"https://www.livevideotronics.com/"}
             img={videotronics}
             name={"VideoTronics"}
-            detail = {"A Camera and drones repairing client helps you repair your drone. Bring us your drone or Camera we'll get you fix it. VideoTronics is a web app which'll guide you to us which will ehlp you solving your problems."}
+            detail = {"A Camera and drones repairing client helps you repair your drone. Bring us your drone or Camera we'll get you fix it. VideoTronics is a web app which'll guide you to us which will help you solving your problems."}
           />
           <ProjectCard
             link={"https://github.com/TheToadSannin/astro_vista"}
