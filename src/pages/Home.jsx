@@ -4,18 +4,15 @@ import wdimg from "../assets/web_developer.png";
 import prgimg from "../assets/programmer.png";
 import auto_app from "../assets/auto_applica.png";
 import videotronics from "../assets/videotronics.png";
-import astrovista from "../assets/astrovista.png";
 import collegeLogo from "../assets/college_logo.png"
 import lotusLogo from "../assets/lotus_valley_logo.png"
 import springdalesLogo from "../assets/springdales_school.png"
 import rocketsend from "../assets/rocket.png"
 import chess from "../assets/chess.png"
 import gamer from "../assets/gamer.png"
-import github from "../assets/github.png"
-import twitter from "../assets/twitter.png"
-import linkedin from "../assets/linkedin.png"
 import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser"
+import spicy_algo from "../assets/spicy_algo.png"
 
 const Home = () => {
 
@@ -112,25 +109,25 @@ const Home = () => {
           <ProjectCard
             link={"https://good-teal-woodpecker-tam.cyclic.app"}
             img={auto_app}
-            name={"Auto Applica"}
-            detail = {"Generates applications and allows to write applications and send to the respective respeint using Auto Applica only. Auto applica simplies the way of not only writing applications but also submitting applications saving a lot of efforts"}
+            name={"Auto-Applica"}
+            detail = {"Designed and developed a secure web application empowering students to effortlessly generate, submit, and communicate with teachers via encrypted channels, enhancing academic workflows and data privacy in education."}
           />
           <ProjectCard
             link={"https://www.livevideotronics.com/"}
             img={videotronics}
-            name={"VideoTronics"}
-            detail = {"A Camera and drones repairing client helps you repair your drone. Bring us your drone or Camera we'll get you fix it. VideoTronics is a web app which'll guide you to us which will help you solving your problems."}
+            name={"Video-Tronics"}
+            detail = {"Crafted a specialized web application for a cutting-edge drone and camera repair center, streamlining repair requests, inventory management, and secure client communication. Elevating efficiency and customer satisfaction in the tech repair industry."}
           />
           <ProjectCard
-            link={"https://github.com/TheToadSannin/astro_vista"}
-            img={astrovista}
-            name={"Astro Vista"}
-            detail={"A model of our Solar System, shows the sequence of planets, Shows the rotation speed and the direction of rotation, and also tells about the accurate Axial tilt of all planets. "}
+            link={"https://spicy-algorithm.vercel.app/"}
+            img={spicy_algo}
+            name={"Spicy-Algorithm"}
+            detail={"Crafted a user-centric web app for cafeteria feedback, bridging students and culinary services. Enhancing satisfaction and driving culinary service improvements through streamlined feedback collection."}
           />
         </div>
         <div>
           <h1>
-            More At My <a href="https://github.com/TheToadSannin/">Github </a>
+            Visit My <a href="https://github.com/TheToadSannin/">Github</a> For More 
           </h1>
         </div>
       </div>
