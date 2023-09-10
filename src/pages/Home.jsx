@@ -157,8 +157,8 @@ const Home = () => {
         </div>
         <div>
           <h1>
-            Visit My <a href="https://github.com/TheToadSannin/">Github</a> For
-            More
+            Don't forget to checkout my{" "}
+            <a href="https://github.com/TheToadSannin/">Github</a> For More
           </h1>
         </div>
       </div>
