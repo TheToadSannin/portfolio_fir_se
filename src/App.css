@@ -12,13 +12,11 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-image: url('/src/assets/rocketScroll.png');
+  background-image: url("/src/assets/rocketScroll.png");
   background-repeat: no-repeat;
   background-size: 20px;
   -webkit-transform: rotate(180);
 }
-
-
 
 :root {
   --card-color: rgb(31, 23, 75);
@@ -30,15 +28,14 @@
   box-sizing: border-box;
   padding: 0;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-body{
+body {
   background-image: url("/src/assets/stars_background.jpg");
   animation: starsrotate 10s infinite;
   animation-timing-function: linear;
-  
-  
+  overflow-x: hidden;
 }
 @keyframes starsrotate {
   0% {
@@ -47,7 +44,6 @@ body{
   100% {
     background-position: 612px;
   }
-  
 }
 .blue {
   color: rgb(95, 67, 255);
@@ -285,25 +281,25 @@ nav div i:hover {
   justify-content: center;
   align-items: center;
 }
-.qualifications>h1 {
+.qualifications > h1 {
   font-size: 60px;
   width: 100%;
   letter-spacing: 2px;
 }
-.qualifications>p{
+.qualifications > p {
   color: white;
   width: 100%;
   text-align: left;
   margin-bottom: 2em;
   letter-spacing: 2px;
 }
-.quali-cards{
+.quali-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.qualicard{
+.qualicard {
   border-radius: 20px;
   height: 500px;
   width: 400px;
@@ -314,41 +310,40 @@ nav div i:hover {
   padding: 1.5em;
   background-color: var(--card-color);
   margin: 1em;
-  transition: ease-in-out .25s;
+  transition: ease-in-out 0.25s;
 }
-.qualicard h1{
+.qualicard h1 {
   letter-spacing: 1px;
   padding: 0.5em;
   text-align: center;
 }
-.qualicard p{
+.qualicard p {
   font-family: "Quicksand", sans-serif;
   letter-spacing: 1px;
   line-height: 1.5;
   font-size: 16px;
 }
 
-.qualicard:hover{
+.qualicard:hover {
   transform: scale(1.05);
   border: 2px solid white;
   box-shadow: 0 0 20px rgb(95, 67, 255);
 }
 
-.findMe{
+.findMe {
   width: 70%;
   margin-top: 150px;
-
 }
-.findMe .links{
+.findMe .links {
   display: flex;
   justify-content: space-evenly;
   padding-inline-start: 1em;
-  margin:  50px 0;
+  margin: 50px 0;
 }
-.findMe > h1 > span{
+.findMe > h1 > span {
   font-size: 60px;
 }
-.findMe a i{
+.findMe a i {
   font-size: 90px;
   transition: all ease-in-out 0.05s;
 }
@@ -357,9 +352,7 @@ nav div i:hover {
   filter: drop-shadow(0px 0px 2px white);
 }
 
-
-
-.contactus{
+.contactus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -368,20 +361,20 @@ nav div i:hover {
   width: 70%;
   margin-bottom: 120px;
 }
-.planets{
+.planets {
   padding: 1em;
 }
-.inputs form{
+.inputs form {
   display: flex;
   flex-direction: column;
   /* padding: 1em; */
   /* border: 1px solid white; */
 }
-::placeholder{
+::placeholder {
   color: white;
   opacity: 0.7;
 }
-.inputs input{
+.inputs input {
   background-color: var(--card-color);
   border: none;
   color: white;
@@ -390,7 +383,7 @@ nav div i:hover {
   border-radius: 50px;
   margin: 2em 0;
 }
-.inputs textarea{
+.inputs textarea {
   background-color: var(--card-color);
   border: none;
   color: white;
@@ -400,21 +393,21 @@ nav div i:hover {
   margin: 2em 0;
   resize: none;
 }
-.inputs button img{
+.inputs button img {
   width: 100px;
   transition: ease-in-out 0.25s;
 }
-.inputs button{
+.inputs button {
   border: none;
   background: none;
   transition: ease-in-out 0.25s;
 }
-.inputs button:hover img{
+.inputs button:hover img {
   transform: scale(1.2);
   filter: drop-shadow(-20px 15px 10px rgb(255, 132, 0));
 }
 
-.inputs h1{
+.inputs h1 {
   font-size: 60px;
   text-align: center;
 }
@@ -448,8 +441,6 @@ nav div i:hover {
     background-position: 600px;
   }
 }
-
-
 
 @media (max-width: 600px) {
   nav {
@@ -499,7 +490,7 @@ nav div i:hover {
   .card {
     width: 100%;
   }
-  .projects>div> h1>span {
+  .projects > div > h1 > span {
     font-size: 38px;
   }
   .projects > div > p {
@@ -507,56 +498,54 @@ nav div i:hover {
     width: 30ch;
   }
 
-  .project-card div{
-    width: 300px;
-  }
-  .project-card div p{
-    width: 30ch;
-  }
-  .project-card img{
+  .project-card div {
     width: 100%;
   }
-/* 
+  .project-card div p {
+    width: 30ch;
+  }
+  .project-card img {
+    width: 100%;
+  }
+  /* 
   .project-card{
     width: 100%;
   } */
-  .qualifications > h1 > span{
+  .qualifications > h1 > span {
     font-size: 38px;
-
   }
 
-  .qualifications{
+  .qualifications {
     /* width: 100%; */
-    word-wrap:normal;
+    word-wrap: normal;
     margin: 0;
   }
-  .qualicard{
+  .qualicard {
     width: 300px;
     margin: 20px;
     justify-items: center;
   }
-  .qualicard >h1 {
+  .qualicard > h1 {
     font-size: 38px;
   }
   .qualicard > p {
     font-size: 12px;
   }
 
-  .contactus{
+  .contactus {
     padding: 0;
   }
-  .planets{
+  .planets {
     padding: 0;
   }
-  .inputs{
+  .inputs {
     padding: 0;
   }
-  .inputs > h1 > span{
+  .inputs > h1 > span {
     font-size: 38px;
   }
 
-  #earth{
-
+  #earth {
     width: 300px;
     height: 300px;
     background-size: 600px;
@@ -565,17 +554,16 @@ nav div i:hover {
     animation-timing-function: linear;
   }
 
-  .findMe > h1 > span{
+  .findMe > h1 > span {
     font-size: 38px;
   }
-  .findMe .links{
+  .findMe .links {
     flex-direction: column;
     align-items: center;
   }
-  .findMe .links a{
+  .findMe .links a {
     margin-bottom: 1em;
   }
-
 }
 /* 
 @media (max-width: 400px) {
@@ -584,5 +572,5 @@ nav div i:hover {
   }
   .project-card p {
     /* width: 30ch; */
-  /* }
-} */ 
+/* }
+} */
